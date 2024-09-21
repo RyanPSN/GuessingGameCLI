@@ -13,12 +13,23 @@ int main() {
 	int guessNumber = rand() % 10 + 1;
 
 	DWORD x = 0;
+
 	cin >> x;
 
-	for (int j = 0; j < 1; j++) {
+	for (int loop = 0; loop < 1; loop++) {
 
 		while (isActive) {
 
+			if (x < guessNumber) {
+				cout << "To low" << endl;
+
+			}
+
+			if (x > guessNumber) {
+
+				cout << "To High" << endl;
+
+			}
 
 			if (x == guessNumber) {
 
@@ -36,6 +47,8 @@ int main() {
 
 			isActive = false;
 		}
+
+
 
 		system("pause > 0");
 		return 0;
